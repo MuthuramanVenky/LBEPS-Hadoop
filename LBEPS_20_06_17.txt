@@ -1,0 +1,62 @@
+20-06-2017 
+Logic Building and Effective Solving
+
+
+You have been given list of indian citizenswhich contains
+
+ID
+Name
+Gender (Male/Female)
+Age
+Qualification (10th, 12th, UG, PG, PHD)
+City
+State
+Country
+Salary
+Employment status (Yes/No)
+Marital status (Married/Single/Widow)
+
+
+Analysis-1:
+Write the logic to check total male and female 
+
+1.Start
+2.Check the gender details
+3.If gender is male, sum the male count
+4.If gender is female, sum the female count
+5.Display the male and female counts individully
+6.Stop
+
+Analysis-2:
+Write the logic to check how many citizes are graduate
+
+1.Start
+2.Check the Qualification details
+3.If qualification is UG/PG/PHD, sum the graduate count
+4.If the qualifiaction is 10th/12th, they are not graduates
+5.Display the Graduates count
+6.Stop
+
+
+Analysis-3:
+Write the logic to check how many citizens is having income greater than 1lac per month
+
+1.Start
+2.Check the Employment status
+3.If employment is No, they are considered for Salary calculation
+4.If employment is Yes, check the salary details.
+5.If salary is greater than 1lac, sum the salary greater than 1lac count
+6.If salary is less than 1lac, don't consider them
+7.Stop
+
+Analysis-4:
+Write the logic to check how many are married, widow, single
+
+1.Start
+2.Check the Marital status details
+3.If status is married, sum the married count
+4.If status is unmarried, sum the unmarried count
+5.If status is widow, sum the widow count
+6.Display the individual values
+7.Stop
+
