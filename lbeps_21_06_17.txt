@@ -1,0 +1,43 @@
+21-06-2017
+
+
+1.What is operator? How many types of operator?
+An operator is special symbol that is combined with one or more operands to perform special operation and return a result.
+Types of operators:
+*Arithemtic operators (+,-,*,/,%)
+*Assignment operators (=+,-=,*=,/=,%=)
+*Comparison operators (>,<,>=,<=,!=)
+*Logical opeartors(||,&&)
+*Unary operators(+,-,++,--,!)
+*Bitwise operator
+*Shift operator(>>,<<)
+
+
+2.What is condition? What are differnt ways of implementing condition?
+For taking various decision, we use certain conditions. Based on the given condition, next step will be executed in a program.
+Various conditions are,
+*if 
+*ifelse 
+*switch
+
+
+3.What is looping? What are differnet ways of implementing looping?
+Looping is used to execute the same statements for several number of times.
+Various types of loops are,
+*for
+*while
+*do while
+
+
+4.What is function? How to implement function in program?
+There are various methods and arguments inside the class, these are called functions. 
+Functions are declared inside the classes for the programming part and an object is used in main function for further access
+
+
+
+5.What is data type? What are different types of data type in program?
+Working with varying data in an application is data type. There are various data types such,
+*Integer (int,byte,short,long)
+*Float (float,double)
+*Boolean (can store true or false)
+*Character(char,String)
