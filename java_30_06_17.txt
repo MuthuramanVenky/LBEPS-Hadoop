@@ -1,0 +1,123 @@
+30-06-2017
+
+
+1.Write a program to accept 3 numbers and display highest numbers using conditions only
+
+package mm;
+
+import java.util.Scanner;
+
+public class Highest {
+
+	void getdetails()
+	{
+		int num1,num2,num3;
+		Scanner sin=new Scanner(System.in);
+		System.out.println("Enter the three numbers");
+		num1=sin.nextInt();
+		num2=sin.nextInt();
+		num3=sin.nextInt();
+	
+		if((num1>num2) && (num1>num3))
+		{
+			System.out.println("The maximum number is " + num1);
+		}
+		
+		else if(num2>num3)
+		{
+			System.out.println("The maximum number is " + num2);
+		}
+		else
+		{
+			System.out.println("The maximum number is " + num3);
+		}
+	}
+	public static void main(String[] aa)
+	{
+		Highest ab=new Highest();
+		ab.getdetails();
+	}
+	}
+	
+
+
+
+2.Write a program to accept a string and check whether 3rd character of string is 's' or not
+
+package mm;
+
+import java.util.Scanner;
+import java.util.jar.Attributes.Name;
+
+public class Charactercheck {
+
+	public static void main(String[] aa)
+	{
+	String name;
+    System.out.println("Enter the string");
+    Scanner sin=new Scanner(System.in);
+    name=sin.next();
+    char ch =  name.charAt(2);
+    if(ch=='s')
+    	System.out.println("true");
+    else
+    	System.out.println("false");
+    
+   
+    }
+	
+
+	}
+
+
+
+3.Write a program to accept a string and display last character of string without using string functions
+
+
+package mm;
+
+import java.util.Scanner;
+
+public class Lastcharacter {
+
+	public static void main(String[] aa)
+	{
+	String name;
+	int count;
+    System.out.println("Enter the string");
+    Scanner sin=new Scanner(System.in);
+    name=sin.next();
+    char ch[] =  name.toCharArray();
+    count=name.length();
+    System.out.println("The last character is " + name.charAt(count-1) );
+	}
+}
+
+
+
+
+4.Write a program to accept a string and replace 3rd character with 't' 
+
+package mm;
+
+import java.util.Scanner;
+public class Replacecharacter {
+
+	public static void main(String[] aa)
+	{
+	String name;
+	
+    System.out.println("Enter the string");
+    Scanner sin=new Scanner(System.in);
+    name=sin.next();
+    char ch[] =  name.toCharArray();
+    ch[3] = 't';
+    int count = name.length();
+    for(int i=0;i<count;i++){
+    	System.out.print(ch[i]);	
+    }
+    
+	}
+}
+
+

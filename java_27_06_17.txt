@@ -1,0 +1,76 @@
+27-06-2017
+
+
+1.Write a program to create four functions 1.add, 2.sub, 3.mul, 4.divide
+1.All functions must have variables for accepting 2 numbers and display result
+2.All functions must be called inside main function without object
+3.All function must return result to calling function
+
+package mm;
+
+import java.util.Scanner;
+
+public class Calculation {
+
+
+static int add()
+{
+	int a,b;
+	System.out.println("Addition");
+	Scanner sin=new Scanner(System.in);
+	System.out.println("Enter the two numbers");
+	a=sin.nextInt();
+	b=sin.nextInt();
+	
+	return a+b;
+}
+static int sub()
+{
+	int a,b;
+	System.out.println("Subtraction");
+	Scanner sin=new Scanner(System.in);
+	System.out.println("Enter the two numbers");
+	a=sin.nextInt();
+	b=sin.nextInt();
+	
+	return a-b;
+}
+
+static int mul()
+{
+	int a,b;
+	System.out.println("Multiplication");
+	Scanner sin=new Scanner(System.in);
+	System.out.println("Enter the two numbers");
+	a=sin.nextInt();
+	b=sin.nextInt();
+	
+	return a*b;
+}
+
+static int divide()
+{
+	int a,b;
+	System.out.println("Division");
+	Scanner sin=new Scanner(System.in);
+	System.out.println("Enter the two numbers");
+	a=sin.nextInt();
+	b=sin.nextInt();
+	
+	return a/b;
+}
+
+public static void main(String [] aa)
+{
+	int a,b,c;
+	double d;
+	a=Calculation.add();
+	b=Calculation.sub();
+	c=Calculation.mul();
+	d=Calculation.divide();
+	System.out.println("The sum is " + a);
+	System.out.println("The difference is " + b);
+	System.out.println("The product is " + c);
+	System.out.println("The quotient is " + d);
+}
+}

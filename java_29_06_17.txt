@@ -1,0 +1,244 @@
+29-06-2017
+
+
+1.Write a program to accept movie details a.movie id, b.name, c.actorname, d.directorname, e.year of release, f.language, g.totalincome, h.rating, i.duration
+analysis:
+1.total number of movies released
+2.total income of all movies
+3.total rating > 4
+4.total movies language wise
+5.total movies with director name John d
+6.Total movies > 1.5 duration
+
+
+package mm;
+
+import java.util.Scanner;
+
+public class Movies {
+String id,moviename, actorname, directorname,language;
+int year, rating, income;
+float duration;
+
+public void getdetails()
+{
+	
+	int engcount=0,hindicount=0,chinesecount=0;
+	int moviecount=0,sumtotal=0;
+	int ratingcount=0;
+	int directornamecount=0;
+	int durationcount=0;
+	for(int i=0;i<2;i++)
+	{
+		
+		System.out.println("Enter the movie id");
+		Scanner sin=new Scanner(System.in);
+		id=sin.nextLine();
+		System.out.println("Enter the movie name");
+		moviename=sin.nextLine();
+		System.out.println("Enter the actor name");
+		actorname=sin.nextLine();
+		System.out.println("Enter the director name");
+		directorname=sin.nextLine();
+		System.out.println("Enter the language");
+		language=sin.nextLine();
+		System.out.println("Enter the year of release");
+		year=sin.nextInt();
+		System.out.println("Enter the rating of movie");
+		rating=sin.nextInt();
+		System.out.println("Enter the income of movie");
+		income=sin.nextInt();
+		System.out.println("Enter the duration");
+		duration=sin.nextFloat();
+		
+		
+		moviecount=moviecount+1;
+		sumtotal=sumtotal+income;
+		
+		if(language.equals("English"))
+		{
+			engcount=engcount+1;
+		}
+		else if(language.equals("hindi"))
+		{
+			hindicount=hindicount+1;
+		}
+		else
+		{
+			chinesecount=chinesecount+1;
+		}
+		
+		if(rating>=4)
+		{
+			ratingcount=ratingcount+1;
+		}
+		
+		if(directorname.equals("john d"))
+		{
+			directornamecount=directornamecount+1;
+		}
+		if(duration>1.5)
+		{
+			durationcount=durationcount+1;
+		}
+	}
+	System.out.println("Total number of movies released is " + moviecount);
+	System.out.println("Total income is " + sumtotal);
+	System.out.println("English movies   "+engcount);
+	System.out.println("hindi movies   "+hindicount);
+	System.out.println("chinese movies   "+chinesecount);
+	System.out.println("total number of movies greater than 1.5 duration is " + durationcount);
+	System.out.println("total number of movies greater than 4 rating is " + ratingcount);
+	System.out.println("total number of movies with director John D is " + directornamecount);
+}
+public static void main(String[] aa)
+{
+	Movies d=new Movies();
+	d.getdetails();
+}
+}
+
+
+
+
+
+
+
+2.Write a program in java to accept details of 10 employees and display bonus given to employees as given, 
+if salary 10000, bonus 30%
+if salary 50000, bonus 20%
+if salary 100000, bonus 10%
+
+
+
+package mm;
+
+import java.util.Scanner;
+
+public class employeedetails {
+
+	String name; 
+	float salary;
+	double bonus;
+
+void getdetails()
+{
+	System.out.println("Enter the name");
+	Scanner sin=new Scanner(System.in);
+	name=sin.nextLine();
+	System.out.println("Enter the salary");
+	salary=sin.nextFloat();
+}
+void bonusanalysis()
+{
+	if(salary>10000&&salary<50000)
+	{
+		bonus=salary*0.3;
+	}
+	else if(salary>50000&&salary<100000)
+	{
+		bonus=salary*0.2;
+	}
+	else if(salary>100000)
+	{
+		bonus=salary*0.1;
+	}
+System.out.println("The employee details are"  +  name +   salary);
+System.out.println("The bonus amount is"  +  bonus);
+}
+public static void main(String[] aa)
+{
+	employeedetails d=new employeedetails();
+	d.getdetails();
+	d.bonusanalysis();
+}
+}
+
+
+
+
+3.Write a program to accept numbers and reverse it
+
+package mm;
+
+import java.util.Scanner;
+
+public class reversestring {
+public static void main(String[] args)
+{
+	 int n, reverse = 0;
+	 int num,total;
+     System.out.println("Enter the number to reverse");
+     Scanner in = new Scanner(System.in);
+     n = in.nextInt();
+
+     while( n != 0 )
+     {
+         reverse = reverse * 10;
+         reverse = reverse + n%10;
+         n = n/10;
+     }
+
+     System.out.println("Reverse of entered number is "+reverse);
+     
+     
+}
+}
+
+
+4.Write menu driven program for calculator 1.add, 2.sub, 3.mul, 4.divide, 5.percent
+
+package mm;
+
+import java.util.Scanner;
+
+public class calculator {
+float num1,num2,result;
+
+void getdetils()
+{
+System.out.println("Enter two numbers");
+Scanner sin=new Scanner(System.in);
+num1=sin.nextFloat();
+num2=sin.nextFloat();
+}
+
+void results()
+{
+	int choice;
+	System.out.println("Enter 1.Add, 2.Sub, 3.Mul, 4.Div, 5.Percent, 6.Exit");
+	Scanner in=new Scanner(System.in);
+	choice=in.nextInt();
+	if (choice==1)
+	{
+		result=num1+num2;
+	}
+	else if (choice==2)
+	{
+		result=num1-num2;
+	}
+	else if (choice==3)
+	{
+		result=num1*num2;
+	}
+	else if (choice==4)
+	{
+		result=num1/num2;
+	}
+	else if (choice==5)
+	{
+		result=num1%num2;
+	}
+	System.out.println("The value of results is" + result);
+}
+public static void main(String[] args)
+{
+	calculator f=new calculator();
+	f.getdetils();
+	f.results();
+}
+}
+
+
+
+
