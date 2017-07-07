@@ -1,0 +1,56 @@
+package mm;
+
+import java.util.Scanner;
+
+class Excp extends Exceptiondemo {
+	
+	int mathsmark;
+	public void mathsdetails()
+	{
+		try
+		{
+		Scanner din=new Scanner(System.in);
+		System.out.println("Enter the mathsmark");
+		mathsmark=din.nextInt();
+		System.out.println(mathsmark);	
+		}
+		catch (Exception e)
+		{
+			System.out.println(e+"enter the valid input");
+		}
+		finally
+		{
+			System.out.println("Block Ending");
+		}
+		}
+	
+}
+
+
+
+
+public class Exceptiondemo {
+String name, id;
+int total;
+public void getdetails()
+{
+	System.out.println("Enter the Name");
+	Scanner sin=new Scanner(System.in);
+	name=sin.nextLine();
+	System.out.println("Enter the Id");
+	id=sin.nextLine();
+	System.out.println("Enter the total");
+	total=sin.nextInt();
+}
+
+public static void main(String[] aa)
+{
+Excp cc=new Excp();
+cc.mathsdetails();
+cc.getdetails();
+
+
+
+}
+}
+
