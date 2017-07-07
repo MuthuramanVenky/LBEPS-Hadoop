@@ -1,0 +1,117 @@
+package mm;
+
+import java.util.Scanner;
+
+
+class Maths extends Ssdetails
+{
+	int mathsmark;
+	public void mathsdetails()
+	{
+		Scanner din=new Scanner(System.in);
+		System.out.println("Enter the mathsmark");
+		mathsmark=din.nextInt();
+		System.out.println(mathsmark);
+	}
+	
+}
+
+class Computer extends Ssdetails
+{
+	int csmark;
+	Computer()
+	{
+		Scanner tin=new Scanner(System.in);
+		System.out.println("Enter the csmark");
+		csmark=tin.nextInt();
+		System.out.println(csmark);
+	}
+}
+
+class Hard extends Computer
+{
+	int hdetails;
+	Hard()
+	{
+		Scanner tin=new Scanner(System.in);
+		System.out.println("Enter the hdetails");
+		hdetails=tin.nextInt();
+		System.out.println(hdetails);
+	}
+}
+
+class Soft extends Computer
+{
+	int sdetails;
+	public void softdetails()
+	{
+		Scanner tin=new Scanner(System.in);
+		System.out.println("Enter the sdetails");
+		sdetails=tin.nextInt();
+		System.out.println(sdetails);
+	}
+}
+
+class Biology extends Ssdetails
+{
+	int biomark;
+	Biology()
+	{
+		Scanner tin=new Scanner(System.in);
+		System.out.println("Enter the biomark");
+		biomark=tin.nextInt();
+		System.out.println(biomark);
+	}
+}
+
+class Botany extends Biology
+{
+	int botdetails;
+	Botany()
+	{
+		Scanner tin=new Scanner(System.in);
+		System.out.println("Enter the botdetails");
+		botdetails=tin.nextInt();
+		System.out.println(botdetails);
+	}
+}
+
+class Zoology extends Biology
+{
+	int zoodetails;
+	Zoology()
+	{
+	
+		Scanner tin=new Scanner(System.in);
+		System.out.println("Enter the zoodetails");
+		zoodetails=tin.nextInt();
+		System.out.println(zoodetails);
+	}
+}
+
+public class Ssdetails {
+String name, id;
+int total;
+public void getdetails()
+{
+	System.out.println("Enter the Name");
+	Scanner sin=new Scanner(System.in);
+	name=sin.nextLine();
+	System.out.println("Enter the Id");
+	id=sin.nextLine();
+	System.out.println("Enter the total");
+	total=sin.nextInt();
+}
+
+public static void main(String[] aa)
+{
+Zoology bb=new Zoology();
+Maths cc=new Maths();
+cc.mathsdetails();
+cc.getdetails();
+Hard ff=new Hard();
+
+
+
+}
+}
