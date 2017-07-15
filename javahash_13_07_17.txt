@@ -1,0 +1,81 @@
+13-07-2017
+Write a program to perform all ooperations related with HashMap
+1.store employee details by using employee class
+2.traverse employee details stored in collection object
+3.delete employee details
+4.add employee details
+
+
+package mm;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+public class Hashmapdemo {
+	
+	public static void details()
+	{
+		Employee1 row1= new Employee1("01","Jim",27,33000);
+		Employee1 row2= new Employee1("02","Sim",28,37000);
+		Employee1 row3= new Employee1("03","Kim",25,34000);
+		Employee1 row4= new Employee1("04","Dim",31,41000);
+		Employee1 row5= new Employee1("05","Rim",29,32000);
+		
+		HashMap<Integer,Employee1> empdt=new HashMap<Integer,Employee1>();
+		empdt.put(1001, row1);
+		empdt.put(1002,row2);
+		empdt.put(1003,row3);
+		empdt.put(1004,row4);
+		empdt.put(1005,row5);
+	
+		Set set = empdt.entrySet();
+		Iterator itr=set.iterator();
+		
+		for(Map.Entry<Integer,Employee1> mapentry:empdt.entrySet()){
+            int key = mapentry.getKey();
+            Employee1 e1 = mapentry.getValue();
+                System.out.println("Key is : "+key);
+	System.out.println("The value is : " +e1.empid+" "+e1.empname+" "+e1.empage+" "+e1.empsalary);
+		}
+	
+System.out.println("After removing data");
+empdt.remove(1003);
+
+Set seta = empdt.entrySet();
+Iterator itra=seta.iterator();
+
+for(Map.Entry<Integer,Employee1> amapentry:empdt.entrySet()){
+    int akey = amapentry.getKey();
+    Employee1 e2 = amapentry.getValue();
+        System.out.println("Key is : "+akey);
+System.out.println("The value is : " +e2.empid+" "+e2.empname+" "+e2.empage+" "+e2.empsalary);
+
+		}}
+
+	public static void main(String[] aa)
+	{
+		details();
+	}
+
+}
+class Employee1
+{
+	String empid;
+	String empname;
+	int empage;
+	int empsalary;
+	
+public Employee1(String id, String name, int age, int salary)
+{
+	this.empid=id;
+	this.empname=name;
+	this.empage=age;
+	this.empsalary=salary;
+}
+}
+

@@ -1,0 +1,41 @@
+package mm;
+
+import java.util.Scanner;
+
+public class GreaterEx {
+public void checknumber() 
+{
+	int number;
+	Scanner sin=new Scanner(System.in);
+
+
+System.out.println("Enter the number");
+number = sin.nextInt();
+try{
+	
+if(number>10)
+{
+	
+	throw new GreaterNumberException("Enter number less than 10");
+	}
+	
+}
+catch(GreaterNumberException e){
+	
+}
+}
+
+public static void main(String[] aa)
+{
+	GreaterEx obj = new GreaterEx();
+
+	obj.checknumber();
+}}
+class GreaterNumberException extends Exception
+{
+	GreaterNumberException(String message)
+	{
+		super(message);
+	}
+}
+
